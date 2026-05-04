@@ -21,6 +21,7 @@ class Ataque:
         self.daño = daño
         self.tipo = tipo
 
+#-----------------------------------------------
 impactrueno=Ataque('impactrueno',30,'electrico')
 placaje = Ataque("Placaje", 18, "normal")
 #-----------------------------------------------
@@ -32,6 +33,7 @@ ataques_charmander=[arañazo,ascuas]
 #-----------------------------------------------
 pokemon1=Pokemon("picachu",'electrico',100,15,ataques_pikachu)
 pokemon_enemigo=Pokemon("charmander",'fuego',100,10,ataques_charmander)
+#-----------------------------------------------
 
 class Combate:
     def __init__(self,pokemon1,pokemon_enemigo):
@@ -45,17 +47,39 @@ class Combate:
                 ataque_elegido=impactrueno
             elif op==2:
                 ataque_elegido=placaje
-            print('==================',pokemon1.atacar(pokemon_enemigo,ataque_elegido),'==================')
+            print('==================',self.pokemon1.atacar(pokemon_enemigo,ataque_elegido),'==================')
             if self.pokemon_enemigo.vida<=0:
                 print(f'{self.pokemon_enemigo.nombre} ha perdido toda su vida X_X\nGANASTE!')
                 break
             print('ATACA',pokemon_enemigo.nombre,'!')
-            ataque_enemigo=random.choice(pokemon_enemigo.lista_ataques)
+            ataque_enemigo=random.choice(self.pokemon_enemigo.lista_ataques)
             print(f"{pokemon_enemigo.nombre} usa {ataque_enemigo.nombre}")
             print(pokemon_enemigo.atacar(pokemon1, ataque_enemigo))
             if self.pokemon1.vida<=0:
-                print(f'{self.pokemon1.nombre} ha perdido toda su vida X_X\nGANASTE!')
+                print(f'{self.pokemon1.nombre} ha perdido toda su vida X_X\nPERDISTE!')
                 break
 
-combate = Combate(pokemon1, pokemon_enemigo)
-combate.iniciar()
+
+def menu_principal():
+    salir=False
+
+    while salir == False:
+        print('==========MENU========== ')
+        eleccion=int(input('1.jugar\n2.informacion\n3.salir\nque opcion eliges:'))
+        if eleccion ==1:
+            pokemon1.vida = 100
+            pokemon_enemigo.vida = 100
+
+            combate = Combate(pokemon1, pokemon_enemigo)
+            combate.iniciar()
+        elif eleccion==2:
+            print('por ahora estamos trabajando en la informacion...')
+        elif eleccion==3:
+            print('saliendo...')
+            salir=True
+        else:
+            print('esa opcion no es valida')
+
+
+
+menu_principal()
