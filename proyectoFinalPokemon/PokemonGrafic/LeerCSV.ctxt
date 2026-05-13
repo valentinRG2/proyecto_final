@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=LeerCSV
+comment1.params=
+comment1.target=java.util.ArrayList\ leerPokemones()
+comment2.params=
+comment2.target=java.util.ArrayList\ leerAtaques()
+comment3.params=listaPokemones\ listaAtaques
+comment3.target=java.util.ArrayList\ conectar(java.util.ArrayList,\ java.util.ArrayList)
+numComments=4

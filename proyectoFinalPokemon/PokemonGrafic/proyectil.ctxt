@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=proyectil
+comment1.params=direccion\ combate\ esEnemigo
+comment1.target=proyectil(int,\ Combate,\ boolean)
+comment2.params=
+comment2.target=void\ act()
+numComments=3

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Pokemon
+comment1.params=
+comment1.target=Pokemon()
+comment2.params=enemigo\ ataque
+comment2.target=void\ atacar(Pokemon,\ Ataque)
+numComments=3

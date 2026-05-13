@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Combate
+comment1.params=jugador\ enemigo
+comment1.target=Combate(Pokemon,\ Pokemon)
+comment2.params=indiceAtaque
+comment2.target=void\ turnoJugador(int)
+comment3.params=
+comment3.target=void\ turnoEnemigo()
+comment4.params=
+comment4.target=boolean\ combateTerminado()
+numComments=5
